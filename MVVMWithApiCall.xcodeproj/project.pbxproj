@@ -101,6 +101,11 @@
 		513767FA255647BA00DA87E0 /* MVVMWithApiCall */ = {
 			isa = PBXGroup;
 			children = (
+				5137683525564D0900DA87E0 /* Worker */,
+				5137683425564CF700DA87E0 /* Views */,
+				5137683325564CE700DA87E0 /* ViewModel */,
+				5137683225564CDB00DA87E0 /* Model */,
+				5137683125564CC300DA87E0 /* ViewController */,
 				513767FB255647BA00DA87E0 /* AppDelegate.swift */,
 				513767FD255647BA00DA87E0 /* SceneDelegate.swift */,
 				513767FF255647BA00DA87E0 /* ViewController.swift */,
@@ -129,6 +134,41 @@
 				51376822255647BE00DA87E0 /* Info.plist */,
 			);
 			path = MVVMWithApiCallUITests;
+			sourceTree = "<group>";
+		};
+		5137683125564CC300DA87E0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5137683225564CDB00DA87E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5137683325564CE700DA87E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5137683425564CF700DA87E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5137683525564D0900DA87E0 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
