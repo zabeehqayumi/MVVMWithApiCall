@@ -16,6 +16,8 @@
 		5137680B255647BE00DA87E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51376809255647BE00DA87E0 /* LaunchScreen.storyboard */; };
 		51376816255647BE00DA87E0 /* MVVMWithApiCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51376815255647BE00DA87E0 /* MVVMWithApiCallTests.swift */; };
 		51376821255647BE00DA87E0 /* MVVMWithApiCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51376820255647BE00DA87E0 /* MVVMWithApiCallUITests.swift */; };
+		5174A114255A3654005C1D6F /* DisplayBooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A112255A3654005C1D6F /* DisplayBooksTableViewCell.swift */; };
+		5174A115255A3654005C1D6F /* DisplayBooksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5174A113255A3654005C1D6F /* DisplayBooksTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		5137681C255647BE00DA87E0 /* MVVMWithApiCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMWithApiCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51376820255647BE00DA87E0 /* MVVMWithApiCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMWithApiCallUITests.swift; sourceTree = "<group>"; };
 		51376822255647BE00DA87E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5174A112255A3654005C1D6F /* DisplayBooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayBooksTableViewCell.swift; sourceTree = "<group>"; };
+		5174A113255A3654005C1D6F /* DisplayBooksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayBooksTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +105,13 @@
 		513767FA255647BA00DA87E0 /* MVVMWithApiCall */ = {
 			isa = PBXGroup;
 			children = (
-				5137683525564D0900DA87E0 /* Worker */,
-				5137683425564CF700DA87E0 /* Views */,
-				5137683325564CE700DA87E0 /* ViewModel */,
-				5137683225564CDB00DA87E0 /* Model */,
-				5137683125564CC300DA87E0 /* ViewController */,
 				513767FB255647BA00DA87E0 /* AppDelegate.swift */,
 				513767FD255647BA00DA87E0 /* SceneDelegate.swift */,
-				513767FF255647BA00DA87E0 /* ViewController.swift */,
-				51376801255647BA00DA87E0 /* Main.storyboard */,
+				5137683225564CDB00DA87E0 /* Model */,
+				5137683425564CF700DA87E0 /* Views */,
+				5137683125564CC300DA87E0 /* ViewController */,
+				5137683325564CE700DA87E0 /* ViewModel */,
+				5137683525564D0900DA87E0 /* Worker */,
 				51376807255647BE00DA87E0 /* Assets.xcassets */,
 				51376809255647BE00DA87E0 /* LaunchScreen.storyboard */,
 				5137680C255647BE00DA87E0 /* Info.plist */,
@@ -139,6 +141,7 @@
 		5137683125564CC300DA87E0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				513767FF255647BA00DA87E0 /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -160,6 +163,8 @@
 		5137683425564CF700DA87E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5174A111255A357E005C1D6F /* TableViewCells */,
+				51376801255647BA00DA87E0 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +174,15 @@
 			children = (
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		5174A111255A357E005C1D6F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5174A112255A3654005C1D6F /* DisplayBooksTableViewCell.swift */,
+				5174A113255A3654005C1D6F /* DisplayBooksTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5137680B255647BE00DA87E0 /* LaunchScreen.storyboard in Resources */,
+				5174A115255A3654005C1D6F /* DisplayBooksTableViewCell.xib in Resources */,
 				51376808255647BE00DA87E0 /* Assets.xcassets in Resources */,
 				51376803255647BA00DA87E0 /* Main.storyboard in Resources */,
 			);
@@ -302,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51376806255647BA00DA87E0 /* MVVMWithApiCall.xcdatamodeld in Sources */,
+				5174A114255A3654005C1D6F /* DisplayBooksTableViewCell.swift in Sources */,
 				51376800255647BA00DA87E0 /* ViewController.swift in Sources */,
 				513767FC255647BA00DA87E0 /* AppDelegate.swift in Sources */,
 				513767FE255647BA00DA87E0 /* SceneDelegate.swift in Sources */,
