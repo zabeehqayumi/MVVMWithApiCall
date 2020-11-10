@@ -8,16 +8,21 @@
 import UIKit
 
 class DisplayBooksTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var booksImage: UIImageView! {
+        didSet {
+            
+        }
     }
     
+    @IBOutlet weak var bookNames: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        updateStyling()
+    }
+    
+    private func updateStyling() {
+        // do your styling here
+    }
 }

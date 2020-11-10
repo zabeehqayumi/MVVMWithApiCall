@@ -18,6 +18,8 @@
 		51376821255647BE00DA87E0 /* MVVMWithApiCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51376820255647BE00DA87E0 /* MVVMWithApiCallUITests.swift */; };
 		5174A114255A3654005C1D6F /* DisplayBooksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A112255A3654005C1D6F /* DisplayBooksTableViewCell.swift */; };
 		5174A115255A3654005C1D6F /* DisplayBooksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5174A113255A3654005C1D6F /* DisplayBooksTableViewCell.xib */; };
+		5174A122255A3A83005C1D6F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A121255A3A83005C1D6F /* SearchViewController.swift */; };
+		5174A127255A3A92005C1D6F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174A126255A3A92005C1D6F /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		51376822255647BE00DA87E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5174A112255A3654005C1D6F /* DisplayBooksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayBooksTableViewCell.swift; sourceTree = "<group>"; };
 		5174A113255A3654005C1D6F /* DisplayBooksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayBooksTableViewCell.xib; sourceTree = "<group>"; };
+		5174A121255A3A83005C1D6F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5174A126255A3A92005C1D6F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				513767FF255647BA00DA87E0 /* ViewController.swift */,
+				5174A121255A3A83005C1D6F /* SearchViewController.swift */,
+				5174A126255A3A92005C1D6F /* FavoriteViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -316,8 +322,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5174A122255A3A83005C1D6F /* SearchViewController.swift in Sources */,
 				51376806255647BA00DA87E0 /* MVVMWithApiCall.xcdatamodeld in Sources */,
 				5174A114255A3654005C1D6F /* DisplayBooksTableViewCell.swift in Sources */,
+				5174A127255A3A92005C1D6F /* FavoriteViewController.swift in Sources */,
 				51376800255647BA00DA87E0 /* ViewController.swift in Sources */,
 				513767FC255647BA00DA87E0 /* AppDelegate.swift in Sources */,
 				513767FE255647BA00DA87E0 /* SceneDelegate.swift in Sources */,
