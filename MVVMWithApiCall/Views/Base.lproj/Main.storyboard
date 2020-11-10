@@ -23,37 +23,67 @@
             </objects>
             <point key="canvasLocation" x="-161" y="252"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite View Controller-->
         <scene sceneID="Sbe-X0-oNf">
             <objects>
-                <viewController id="PKX-0b-hVr" sceneMemberID="viewController">
+                <viewController id="PKX-0b-hVr" customClass="FavoriteViewController" customModule="MVVMWithApiCall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H5a-yx-JZs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0zh-c0-s0o">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="obV-lR-Qze"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0zh-c0-s0o" firstAttribute="top" secondItem="obV-lR-Qze" secondAttribute="top" id="5HZ-z5-XsZ"/>
+                            <constraint firstItem="0zh-c0-s0o" firstAttribute="leading" secondItem="obV-lR-Qze" secondAttribute="leading" id="bcP-PR-0jH"/>
+                            <constraint firstItem="obV-lR-Qze" firstAttribute="trailing" secondItem="0zh-c0-s0o" secondAttribute="trailing" id="dGw-YJ-Inz"/>
+                            <constraint firstItem="obV-lR-Qze" firstAttribute="bottom" secondItem="0zh-c0-s0o" secondAttribute="bottom" id="oqY-bK-Dq1"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="ApA-iL-cRk"/>
+                    <connections>
+                        <outlet property="favoriteTableView" destination="0zh-c0-s0o" id="EX4-vR-7vL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XML-f1-X5E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="556"/>
+            <point key="canvasLocation" x="2016" y="587"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="o5i-0b-3dl">
             <objects>
-                <viewController id="AYD-5Z-MQe" sceneMemberID="viewController">
+                <viewController id="AYD-5Z-MQe" customClass="SearchViewController" customModule="MVVMWithApiCall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RaY-Gj-fb1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-hu-AJP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tyX-39-35g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nKQ-hu-AJP" firstAttribute="top" secondItem="tyX-39-35g" secondAttribute="top" id="1ks-jp-Gj2"/>
+                            <constraint firstItem="tyX-39-35g" firstAttribute="bottom" secondItem="nKQ-hu-AJP" secondAttribute="bottom" id="Nxg-AF-1dg"/>
+                            <constraint firstItem="tyX-39-35g" firstAttribute="trailing" secondItem="nKQ-hu-AJP" secondAttribute="trailing" id="WQi-20-6aM"/>
+                            <constraint firstItem="nKQ-hu-AJP" firstAttribute="leading" secondItem="tyX-39-35g" secondAttribute="leading" id="bqh-3Q-Gcn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="vrZ-Qn-H49"/>
+                    <connections>
+                        <outlet property="searchTableView" destination="nKQ-hu-AJP" id="iMN-Jf-jJI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvt-lq-JKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="-50"/>
+            <point key="canvasLocation" x="1952" y="-135"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="v8k-Pl-41L">

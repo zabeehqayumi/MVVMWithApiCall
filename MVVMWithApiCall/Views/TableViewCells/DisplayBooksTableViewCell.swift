@@ -19,6 +19,7 @@ class DisplayBooksTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        bookNames.text = "Dumm book name"
         updateStyling()
     }
     
