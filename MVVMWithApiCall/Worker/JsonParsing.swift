@@ -20,9 +20,9 @@ class JsonParsing {
     
     // https://www.googleapis.com/books/v1/volumes?q=
     
-    typealias success = ([[String: AnyObject]]) -> ()
+    typealias success = (BookModel) -> ()
     
-    static func parseJsonFile(bookName: String, onSucess: success) {
+    static func parseJsonFile(bookName: String, onSucess: @escaping success) {
         // URL in project --> Google books URL
         if let url = URL(string: "https://www.googleapis.com/books/v1/volumes?q=\(bookName)") {
             // URL Session with Data Task
@@ -31,7 +31,7 @@ class JsonParsing {
                 //print(data)
                 do {
                     let json = try JSONDecoder().decode(BookModel.self, from: data)
-                    
+                    onSucess(json)
                 } catch {
                     print("JSON file format was not supported")
                 }

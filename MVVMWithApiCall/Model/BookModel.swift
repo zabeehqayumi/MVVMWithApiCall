@@ -8,13 +8,18 @@
 import Foundation
 
 struct BookModel: Codable {
-    var items: Item?
+    var items: [Volume]?
 }
 
-struct Item: Codable {
-    var volumeInfo: Volumes?
+struct Volume: Codable {
+    var volumeInfo: VolumeInfo?
 }
 
-struct Volumes: Codable {
-    var publisher: String?
+struct VolumeInfo: Codable {
+    var title: String?
+    var imageLinks: ImageLinks?
+}
+
+struct ImageLinks: Codable {
+    var thumbnail: String?
 }
