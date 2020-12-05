@@ -48,4 +48,34 @@ class SearchViewModel {
         let bookImage = book?.items?.object(at: index)?.volumeInfo?.imageLinks?.thumbnail
         return bookImage ?? ""
     }
+    
+    /// Funciton that stores the name of books locally
+    /// - Parameter nameOfBook: pass the name of book
+    func favoriteBookName(nameOfBook: String) {
+        var favoritedBookNames = [String]()
+        /// User defautls
+        /// User defaults are used for persistency for small chain of date which is not confidential
+        let defaults = UserDefaults.standard
+        
+        if let favoriteDefaults = defaults.object(forKey: "bookFavorites") {
+            favoritedBookNames = favoriteDefaults as? [String] ?? []
+        }
+        
+        favoritedBookNames.append(nameOfBook)
+        defaults.set(favoritedBookNames, forKey: "bookFavorites")
+        defaults.synchronize()
+    }
+    
+    func favoriteBookImage(imageUrl: String) {
+        var favoriteBookImage = [String]()
+        let defaults = UserDefaults.standard
+        
+        if let imageDefaults = defaults.object(forKey: "bookImages") {
+            favoriteBookImage = imageDefaults as? [String] ?? []
+        }
+        
+        favoriteBookImage.append(imageUrl)
+        defaults.set(favoriteBookImage, forKey: "bookImages")
+        defaults.synchronize()
+    }
 }

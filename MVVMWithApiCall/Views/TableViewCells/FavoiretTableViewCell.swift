@@ -8,6 +8,7 @@
 import UIKit
 
 class FavoiretTableViewCell: UITableViewCell {
+    
     @IBOutlet weak var largeImage: UIImageView!
     @IBOutlet weak var detailLabel: UILabel!
     

@@ -15,9 +15,11 @@ class SearchViewController: UIViewController {
             booksSearchBar.placeholder = "Search books name here..."
         }
     }
+    
     @IBOutlet weak var searchTableView: UITableView!
     
     lazy var viewModel = SearchViewModel()
+    var temporaryImagesArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,8 +49,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = searchTableView.dequeueReusableCell(withIdentifier: BooksConstants.booksCell) as? DisplayBooksTableViewCell {
             cell.bookNames.text = viewModel.getBookTitle(at: indexPath.row)
             if let urlString = viewModel.getBookImage(at: indexPath.row) {
+                temporaryImagesArray.append(urlString)
                 cell.booksImage.kf.setImage(with: URL(string: urlString))
             }
+            cell.delegate = self
             newCell = cell
         }
         
@@ -68,5 +72,17 @@ extension SearchViewController: UISearchBarDelegate, SearchViewModelDelegate {
         viewModel.searchBooks(text: text)
         searchBar.resignFirstResponder()
         searchBar.text = ""
+        temporaryImagesArray.removeAll()
+    }
+}
+
+extension SearchViewController: CellTappedDelegate {
+    func favoriteItem(cell: DisplayBooksTableViewCell) {
+        if let bookName = cell.bookNames.text {
+            viewModel.favoriteBookName(nameOfBook: bookName)
+        }
+        
+        guard let indexPath = searchTableView.indexPath(for: cell) else { return }
+        viewModel.favoriteBookImage(imageUrl: temporaryImagesArray[indexPath.row])
     }
 }
